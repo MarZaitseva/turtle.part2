@@ -1,14 +1,9 @@
-figure = list(input())
-
-
-
 import turtle
 turtle.shape('turtle')
 
 
-
-
 l = [(30,0),(30,90),(30,270),(30*(2**(1/2)),45),(30*(2**(1/2)),45),(30,180)]
+
 
 def h1():
 
@@ -258,61 +253,14 @@ def nine():
 
 	turtle.pendown()
 
-# nine()
 
-#num = open(numbers.txt)
-
-
-func = [zero, one, two, three, four, five, six, seven, eight, nine]
-
-z = [func[int(i)]() for i in figure]
+funcs = [zero, one, two, three, four, five, six, seven, eight, nine]
 
 
-'''
-for i in figure:
-
-	if i == "0":
-
-		zero()
+with open('numbers.txt') as num:
+	for line in num:
+		z = [funcs[int(i)]() for i in line]
 
 
-	if i == "1":
-
-		one()
-
-	if i == "2":
-
-		two()
-
-	if i == "3":
-
-
-		three()
-
-	if i == "4":
-
-		four()
-
-	if i == "5":
-
-		five()
-
-	if i == "6":
-
-		six()
-
-	if i == "7":
-
-		seven()
-
-	if i == "8":
-
-		eight()
-
-	if i == "9":
-
-		nine()
-
-'''
 turtle.speed(0)
 turtle.done()
