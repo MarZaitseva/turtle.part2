@@ -162,6 +162,7 @@ def five():
 	l1()
 	h2()
 	h2()
+	l1()
 
 	turtle.pendown()
 
@@ -259,14 +260,12 @@ def nine():
 
 # nine()
 
-num = open(numbers.txt)
-
-for line in num:
+#num = open(numbers.txt)
 
 
-func = [zero(), one(), two(), three(), four(), five(), six(), seven(), eight(), nine()]
+func = [zero, one, two, three, four, five, six, seven, eight, nine]
 
-z = [func[i] for i in figure]
+z = [func[int(i)]() for i in figure]
 
 
 '''
@@ -314,6 +313,6 @@ for i in figure:
 
 		nine()
 
-
+'''
 turtle.speed(0)
 turtle.done()
